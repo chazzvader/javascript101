@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+<script>
+var num=Math.floor(Math.random()*100+1;
+var tries=0;
+function guessIt()
+{
+  var guess=document.form1.guess1.value;
+  tries++;
+  if(guess<num)
+    {document.form1.hint.value="No, Guess higher."}
+  if(guess>num)
+    {document.form1.hint.value="No, Guess lower."}
+  if(guess==num)
+    {window.alert("Correct! You guessed it in "+tries+" tries");
+    location.reload();}
+  if(tries==10)
+    {window.alert("Sorry  they number was "+num+".");
+    location.reload();}
+  }
+</script>
+</head>
+
+<body>
+<h2>Guess a number between 1 and 100 in 10 tries of fewer.</h2>
+<form name="form1">
+<input type="text" name="hint" size="35" value="Enter guess below.">
+<h2>Guess</h2>
+<input type="text" name="guess1" size="5"
+<br>
+<input type="button" value="Guess" onclick='guessIt();">
+</form>
+</body>
+</html>
