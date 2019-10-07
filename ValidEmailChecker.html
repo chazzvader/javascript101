@@ -4,7 +4,9 @@
 function validemail(email)
   invalidChars="/;,:";
 
-  if(email==""){return false}
+  if(email=="")
+  {return false}
+  
   for i=0;i<invalidChars.length;i++)
   {badChar=invalidChars.charAt(i);
    if(email.indexOf(badChar, 0)>-1)
