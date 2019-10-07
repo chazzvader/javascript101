@@ -1,0 +1,51 @@
+<script type="text/javascript">
+/* this code checks email syntax */
+
+function validemail(email)
+  invalidChars="/;,:";
+
+  if(email==""){return false}
+  for i=0;i<invalidChars.length;i++)
+  {badChar=invalidChars.charAt(i);
+   if(email.indexOf(badChar, 0)>-1)
+   {return false}
+  }
+  
+  if(email.charAt(0)=="@")
+  {return false}
+  
+  atPos=email.indexOf("@",1);
+  if(atPos==-1)
+  {return false}
+  
+  if(email.indexOf("@",atPos+1)>-1)
+  {return false}
+
+  periodPos=email.indexOf(".",atPos+2);
+  if(periodPos==-1)
+  {return false}
+
+  if(periodPos+3>email.length)
+  {return false}
+
+  return true
+  }
+  
+function testEmail(email)
+  {
+  if(!validEmail(email))
+  {alert("Email is invalid.");}
+  else
+  {alert("Email is valid.");}
+  }
+</script>
+</body>
+
+<form name="form1"
+<p>
+Email:<input type="text" name="email" size="30"> 
+</p>
+<input type="button" value"submit" onclick='testEmail(form1.email.value);'>
+</form>
+    
+  
