@@ -9,7 +9,6 @@ window.onload = function()
   document.getElementById("sbt").onclick = getValues;
 };
 
-//use toFixed(2) to set the precision of the mPayment. Use it on an int.
 function getValues()
 {
   term = document.getElementById("term").value;
