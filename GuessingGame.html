@@ -8,9 +8,9 @@ function guessIt()
   var guess=document.form1.guess1.value;
   tries++;
   if(guess<num)
-    {document.form1.hint.value="No, Guess higher."}
+    {document.form1.hint.value="No, guess higher."}
   if(guess>num)
-    {document.form1.hint.value="No, Guess lower."}
+    {document.form1.hint.value="No, guess lower."}
   if(guess==num)
     {window.alert("Correct! You guessed it in "+tries+" tries");
     location.reload();}
